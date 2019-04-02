@@ -8,4 +8,4 @@ COPY . /app
 RUN npm run build
 
 FROM nginx:1.15.10-alpine
-COPY --from=BUILD /app/dist /usr/share/nginx/html
+COPY --from=BUILD /app/dist/angular /usr/share/nginx/html
